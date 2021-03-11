@@ -1,0 +1,220 @@
+                /* font-family: 'Lato', sans-serif; */
+                
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                
+                body {
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 1.7;
+                    color: #777;
+                    padding: 30px;
+                }
+                
+                .header-container {
+                    height: 95vh;
+                    background-image: linear-gradient(to right bottom, #000000d2, #636363c0), url(/Images/header\ bg\ image.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    clip-path: polygon(50% 13%, 70% 0, 100% 0, 100% 100%, 0 100%, 0 0, 30% 0);
+                    /*polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 23%);*/
+                    position: relative;
+                    padding-top: 20px;
+                }
+                
+                .text-box {
+                    position: absolute;
+                    top: 45%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .logo-box {
+                    position: absolute;
+                    top: 25px;
+                    left: 50%;
+                    transform: translate(-50%, -0%);
+                }
+                
+                .logo {
+                    width: 90px;
+                }
+                
+                .toggle {
+                    width: 40px;
+                    height: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    border: 1px solid white;
+                }
+                
+                .line {
+                    width: 50%;
+                    height: 2px;
+                    background: white;
+                    margin: 0 auto;
+                }
+                
+                .nav {
+                    display: none;
+                    color: #fff;
+                }
+                
+                .nav ul {
+                    display: flex;
+                    justify-content: flex-end;
+                    list-style-type: none;
+                    width: 350px;
+                    float: right;
+                    margin-right: 20px;
+                }
+                
+                .nav ul li {
+                    margin: 10px 0px;
+                }
+                
+                .nav ul li a {
+                    display: block;
+                    padding: 5px 15px;
+                    text-decoration: none;
+                    color: #eee;
+                    border-top: 1px solid white;
+                    transition: background 1s, color 1s;
+                }
+                
+                .nav ul li a:hover {
+                    background: white;
+                    color: black;
+                }
+                
+                a.current {
+                    background: #fff;
+                    color: black !important;
+                }
+                
+                .primary-heading {
+                    color: #fff;
+                    text-transform: uppercase;
+                }
+                
+                .heading-primary-main {
+                    display: block;
+                    font-size: 25px;
+                    font-weight: 400;
+                    letter-spacing: 15px;
+                    animation-name: moveInLeft;
+                    animation-duration: 3s;
+                }
+                
+                .heading-primary-sub {
+                    display: block;
+                    font-size: 12px;
+                    font-weight: 700;
+                    letter-spacing: 5.2px;
+                    animation: moveInRight 2s ease-out;
+                }
+                
+                .btn {
+                    align-self: center;
+                    padding: 10px 20px;
+                    text-align: center;
+                    margin-top: 50px;
+                    background: transparent;
+                    border: 1px solid #fff;
+                    color: white;
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    animation-name: moveIntop;
+                    animation-duration: 3s;
+                    transition: background-color 1s, color 1s;
+                }
+                
+                .btn:hover {
+                    background-color: #fff;
+                    color: #000;
+                }
+                
+                @keyframes moveInLeft {
+                    0% {
+                        opacity: 0;
+                        transform: translateX(-100px) rotate(50deg);
+                    }
+                    80% {
+                        transform: translateX(20px);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translate(0);
+                    }
+                }
+                
+                @keyframes moveIntop {
+                    0% {
+                        opacity: 0;
+                        transform: translatey(100px);
+                    }
+                    80% {
+                        transform: translateX(20px);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translate(0);
+                    }
+                }
+                
+                @keyframes moveInRight {
+                    0% {
+                        opacity: 0;
+                        transform: translateX(100px);
+                    }
+                    80% {
+                        transform: translateX(-20px);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translate(0);
+                    }
+                }
+                
+                @media screen and (min-width: 667px) {
+                    .nav {
+                        display: contents;
+                        color: #fff;
+                    }
+                    .toggle {
+                        display: none;
+                    }
+                    .logo-box {
+                        position: absolute;
+                        top: 20px;
+                        left: 68px;
+                    }
+                    .heading-primary-main {
+                        font-size: 50px;
+                        letter-spacing: 20px;
+                    }
+                    .heading-primary-sub {
+                        font-size: 16px;
+                        letter-spacing: 11.6px;
+                    }
+                    .header-container {
+                        height: 95vh;
+                        background-image: linear-gradient(to right bottom, #000000d2, #636363c0), url(/Images/header\ bg\ image.jpg);
+                        background-size: cover;
+                        background-position: center;
+                        clip-path: polygon(17% 0px, 100% 0%, 100% 100%, 0 100%, 0 17%);
+                        /*polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 23%);*/
+                        position: relative;
+                        padding-top: 20px;
+                    }
+                }
